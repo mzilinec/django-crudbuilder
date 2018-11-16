@@ -209,8 +209,8 @@ class ViewBuilder(BaseBuilder):
 
 class CrudListView(LoginRequiredMixin, TemplateView):
     template_name = "crudbuilder/cruds.html"
-    title = "Registered Cruds"
-    login_required = False
+    title = "Registered models"
+    login_required = True
 
     def cruds(self):
         return registry.items()
